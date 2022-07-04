@@ -95,3 +95,22 @@ function boardUser() {
       board.appendChild(divs);
     }
 }
+
+//----------------------CRIANDO AS CORES ALEATORIAS---------------------
+
+let paletaDeCores = document.querySelectorAll('.color');
+
+paletaDeCores.forEach((evento) => {
+    const novasCores = generateRandomColor();
+    evento.style.backgroundColor = novasCores;
+    let blackColor = document.querySelectorAll('.color')[0].style.backgroundColor = 'black';
+});
+
+function generateRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 15)];
+    }
+    return color;
+}
