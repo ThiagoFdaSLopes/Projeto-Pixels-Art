@@ -1,5 +1,4 @@
 //-------------------- CRIANDO OS PIXELS 5x5 ------------------------
-
 for (let index = 1; index <= 25; index += 1) {
     const board = document.getElementById('pixel-board');
     const divs = document.createElement('div');
@@ -48,3 +47,51 @@ inputBotao.addEventListener('click', function(){
       teste.style.backgroundColor = 'white';
     });
 })
+
+//----------------CRIANDO MECANICA DE GERAR TAMANHO ALEATORIO------------------------
+function createBoardUser(){
+    const board = document.getElementById('pixel-board');
+    const input = document.getElementById('board-size');
+
+    board.innerText = '';
+    if(input.value === ''){
+        alert('Board inválido!');
+    }
+    else if(input.value < 5){
+        alert('Valor invalido');
+        input.value = 5;
+        boardUser();
+    }
+    else if(input.value > 50){
+        input.value = 50;
+        boardUser();
+    }
+    else {
+        boardUser();
+    }
+
+}
+
+
+function clickButton() {
+    const button = document.getElementById('generate-board');
+    button.addEventListener('click', createBoardUser);
+}
+clickButton();
+
+
+//-------------TAMANHO DO BOARD----------------------------
+function boardUser() {
+    const board = document.getElementById('pixel-board');
+    const input = document.getElementById('board-size');
+    let inputValue = input.value;
+    board.style.height = inputValue * 44 + 'px';
+    board.style.width = inputValue * 44 + 'px';
+    const matriz = inputValue ** 2;
+    for (let index = 0; index < matriz; index += 1) {
+      const divs = document.createElement('div');
+      divs.classList.add('pixel');
+      divs.style.backgroundColor = '#fff';
+      board.appendChild(divs);
+    }
+}
