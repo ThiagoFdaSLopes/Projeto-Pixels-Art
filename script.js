@@ -54,7 +54,7 @@ inputBotao.addEventListener('click', function () {
 });
 
 // ----------------CRIANDO MECANICA DE GERAR TAMANHO ALEATORIO------------------------
-function createBoardUser() {
+function inputAreaPixels() {
   const boarda = document.getElementById('pixel-board');
   const input = document.getElementById('board-size');
 
@@ -75,7 +75,7 @@ function createBoardUser() {
 
 function clickButton() {
   const button = document.getElementById('generate-board');
-  button.addEventListener('click', createBoardUser);
+  button.addEventListener('click', inputAreaPixels);
 }
 clickButton();
 
