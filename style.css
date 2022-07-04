@@ -1,14 +1,32 @@
+body {
+    background-color: antiquewhite;
+}
+
 #color-palette {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
 }
 
 .color {
-    margin: 2px;
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
+  margin: 2px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+#pixel-board {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
