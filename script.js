@@ -38,3 +38,13 @@ function coresDosPixels(event) {
     }
 }
 document.addEventListener('click', coresDosPixels);
+
+//------------------------CRIANDO O BOTAO PARA LIMPAR OS PIXELS----------------
+let inputBotao = document.querySelector('#clear-board');
+
+inputBotao.addEventListener('click', function(){
+    const palletCollor = document.querySelectorAll('.pixel');
+    palletCollor.forEach((teste) => {
+      teste.style.backgroundColor = 'white';
+    });
+})

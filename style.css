@@ -30,3 +30,17 @@ body {
   width: 40px;
   height: 40px;
 }
+
+#clear-board {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background: 'white';
+    display: block;
+    max-width: 100px;
+    margin: 10px auto;
+    cursor: pointer;
+    border-color: #fff;
+    border-radius: 50%;
+    border: 1px solid black;    
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+}
